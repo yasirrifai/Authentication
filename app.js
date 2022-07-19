@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 app.use(session({
-  secret: 'longtextstring.',
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: false,
 }));
